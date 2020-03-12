@@ -1,5 +1,4 @@
 out/
-data/
 node_modules/
 versions/Haxe-*/benchmark.sh
 versions/Haxe-*/build
