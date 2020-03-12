@@ -1,0 +1,2 @@
+-hl out/hl/JsonBenchmark.c
+-cmd gcc -O3 -o out/hl/JsonBenchmark -std=c11 -I out/hl $HASHLINK_CC_PARAMS out/hl/JsonBenchmark.c -lhl
