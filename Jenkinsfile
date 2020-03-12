@@ -36,7 +36,7 @@ pipeline {
                 ln -sfn ../../buildConvertCsv.hxml 
                 ln -sfn ../../haxe3_libraries/ haxe_libraries 
                 ln -sfn ../../haxelib.json . 
-                ln -sfn /home/benchmarkdata/json-benchmark/inputdata data
+                ln -sfn ../../data data
                 ln -sfn /home/benchmarkdata/json-benchmark/Haxe-3 results 
                 ln -sfn ../../src 
                 '''
@@ -50,7 +50,7 @@ pipeline {
                 ln -sfn ../../buildConvertCsv.hxml 
                 ln -sfn ../../haxe_libraries/ haxe_libraries 
                 ln -sfn ../../haxelib.json . 
-                ln -sfn /home/benchmarkdata/json-benchmark/inputdata data
+                ln -sfn ../../data data
                 ln -sfn /home/benchmarkdata/json-benchmark/Haxe-4 results 
                 ln -sfn ../../src 
                 '''
@@ -64,7 +64,7 @@ pipeline {
                 ln -sfn ../../buildConvertCsv.hxml 
                 ln -sfn ../../haxe_libraries/ haxe_libraries 
                 ln -sfn ../../haxelib.json . 
-                ln -sfn /home/benchmarkdata/json-benchmark/inputdata data
+                ln -sfn ../../data data
                 ln -sfn /home/benchmarkdata/json-benchmark/Haxe-nightly results 
                 ln -sfn ../../src 
                 '''
