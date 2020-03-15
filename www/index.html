@@ -17,6 +17,7 @@
         <li>JVM and eval are not available on Haxe 3 (Haxe 4 only)</li>
         <li>Haxe 3 uses Hashlink 1.1, Haxe 4 Hashlink 1.10</li>
         <li>NodeJS compilation is run twice, with and without "-D js-es=6" (Haxe 4 builds only)</li>
+        <li>C++ compilation is run twice, with and without "-D HXCPP_GC_GENERATIONAL"</li>
 
         <li>testcase reads hxformat-schema.json and Json.parse and Json.stringifys it 500 times, it also places 500 copies inside an array stringify and parses it once</li>
 
@@ -96,7 +97,7 @@
                             <input id="targetCpp" name="targetCpp" type="checkbox" value="true" checked>
                         </li>
                         <li>
-                            <label for="targetCppGCGen">C++ (HXCPP_GC_GENERATIONAL)</label><br />
+                            <label for="targetCppGCGen">C++ (GC Gen)</label><br />
                             <input id="targetCppGCGen" name="targetCppGCGen" type="checkbox" value="true" checked>
                         </li>
                         <li>
@@ -174,7 +175,7 @@
         </tr>
         <tr>
             <td>2020-03-15 15:00:00</td>
-            <td>added C++ (HXCPP_GC_GENERATIONAL) run</td>
+            <td>added C++ (GC Gen) run</td>
         </tr>
         <tr>
             <td>2020-03-13 00:00:00</td>
