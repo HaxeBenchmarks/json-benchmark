@@ -5,6 +5,7 @@ source benchmark.env
 readonly DATA=$*
 
 ./out/cpp/JsonBenchmark $DATA
+./out/cppGCGen/JsonBenchmark $DATA
 node out/JsonBenchmark.js $DATA
 node out/JsonBenchmark.es6.js $DATA
 java -jar out/java/JsonBenchmark.jar $DATA
