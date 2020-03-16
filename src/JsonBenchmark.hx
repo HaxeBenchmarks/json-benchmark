@@ -1,9 +1,10 @@
 import haxe.Json;
 import haxe.Timer;
+import sys.io.File;
 
 class JsonBenchmark {
 	public function new() {
-		var text:String = loadData();
+		var text:String = File.getContent("data/hxformat-schema.json");
 		var startTime = Timer.stamp();
 
 		var count:Int = 500;
@@ -22,15 +23,6 @@ class JsonBenchmark {
 		schema = Json.parse(text);
 
 		printStats(Timer.stamp() - startTime);
-	}
-
-	macro public static function loadData():haxe.macro.Expr.ExprOf<String> {
-		#if !display
-		var content:String = sys.io.File.getContent("data/hxformat-schema.json");
-		return macro $v{content};
-		#else
-		return "****** invalid data ******";
-		#end
 	}
 
 	function printStats(duration:Float) {
