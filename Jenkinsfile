@@ -17,11 +17,6 @@ pipeline {
                 mkdir -p results/Haxe-4
                 mkdir -p results/Haxe-nightly
                 '''
-
-                echo "Download / update test data (Haxe stdlib, OpenFl and Lime sources)"
-                sh '''
-                echo "not updating inputdata"
-                '''
             }
         }
 
@@ -77,14 +72,14 @@ pipeline {
                 sh '''
                 cd versions/Haxe-3
                 lix download 
-                lix install haxelib:hxcpp 
+                lix install github:HaxeFoundation/hxcpp
                 '''
 
                 echo 'Update lix dependencies for Haxe 4'
                 sh '''
                 cd versions/Haxe-4
                 lix download 
-                lix install haxelib:hxcpp 
+                lix install github:HaxeFoundation/hxcpp
                 '''
 
                 echo 'Update lix dependencies for Haxe nightly'
@@ -93,7 +88,12 @@ pipeline {
                 lix download haxe nightly
                 lix use haxe nightly
                 lix download
-                lix install haxelib:hxcpp
+                lix install github:HaxeFoundation/hxcpp
+                '''
+
+                echo 'Compile hxcpp build tool'
+                sh '''
+                echo "y" | lix run hxcpp run 2> /dev/null; true
                 '''
             }
         }
