@@ -93,7 +93,7 @@ pipeline {
 
                 echo 'Compile hxcpp build tool'
                 sh '''
-                echo "y" | lix run hxcpp run 2> /dev/null; true
+                echo "y" | lix run hxcpp run 2> /dev/null || true
                 '''
             }
         }
