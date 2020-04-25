@@ -26,6 +26,7 @@ pipeline {
                 sh '''
                 cd versions/Haxe-3
                 ln -sfn ../../benchmark.sh . 
+                ln -sfn ../../installAndCompileHxcpp.sh . 
                 ln -sfn ../../build 
                 ln -sfn ../../buildAll.hxml . 
                 ln -sfn ../../buildConvertCsv.hxml 
@@ -40,6 +41,7 @@ pipeline {
                 sh '''
                 cd versions/Haxe-4
                 ln -sfn ../../benchmark.sh . 
+                ln -sfn ../../installAndCompileHxcpp.sh . 
                 ln -sfn ../../build 
                 ln -sfn ../../buildAll.hxml . 
                 ln -sfn ../../buildConvertCsv.hxml 
@@ -54,6 +56,7 @@ pipeline {
                 sh '''
                 cd versions/Haxe-nightly
                 ln -sfn ../../benchmark.sh . 
+                ln -sfn ../../installAndCompileHxcpp.sh . 
                 ln -sfn ../../build 
                 ln -sfn ../../buildAll.hxml . 
                 ln -sfn ../../buildConvertCsv.hxml 
