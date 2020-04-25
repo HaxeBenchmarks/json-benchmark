@@ -6,6 +6,7 @@ readonly DATA=$*
 
 ./out/cpp/JsonBenchmark $DATA
 ./out/cppGCGen/JsonBenchmark $DATA
+haxelib run hxcpp out/JsonBenchmark.cppia 
 node out/JsonBenchmark.js $DATA
 node out/JsonBenchmark.es6.js $DATA
 java -jar out/java/JsonBenchmark.jar $DATA
@@ -17,7 +18,7 @@ haxe build/common.hxml --run JsonBenchmark $DATA
 php out/php/index.php $DATA
 neko out/JsonBenchmark.n $DATA
 python3 out/JsonBenchmark.py $DATA
-# lua out/JsonBenchmark.lua $DATA
+lua out/JsonBenchmark.lua $DATA
 
 # second run to smooth graphs a little
 ./out/cpp/JsonBenchmark $DATA
