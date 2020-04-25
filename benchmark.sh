@@ -18,7 +18,7 @@ haxe build/common.hxml --run JsonBenchmark $DATA
 php out/php/index.php $DATA
 neko out/JsonBenchmark.n $DATA
 python3 out/JsonBenchmark.py $DATA
-lua out/JsonBenchmark.lua $DATA
+# lua out/JsonBenchmark.lua $DATA
 
 # second run to smooth graphs a little
 ./out/cpp/JsonBenchmark $DATA
